@@ -1,0 +1,10 @@
+export const FETCH_USER = 'fetch_user';
+export const FETCH_DASHBOARD = 'fetch_dashboard';
+export const FETCH_CHANNEL_INFO = 'fetch_channel_info';
+export const FETCH_TOP_VIDEOS = 'fetch_top_videos';
+export const FETCH_OVERVIEW_DATA = 'fetch_overview_data';
+export const FETCH_AUDIENCE_DATA = 'fetch_audience_data';
+export const FETCH_SUBSCRIBED_STATUS_DATA = 'fetch_subscribed_status_data';
+export const FETCH_TRAFFIC_SOURCES = 'fetch_traffic_sources';
+// export const DELETE_SURVEY = 'delete_survey';
+// export const FILTER_SURVEYS = 'filter_surveys';
