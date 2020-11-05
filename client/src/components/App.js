@@ -6,10 +6,10 @@ import styled from 'styled-components'
 
 import Header from './Header/index'
 import Dashboard from './Dashboard'
+import LandingPage from './LandingPage'
 
 //const Header = () => <h2>Header</h2>
 
-const LandingPage = () => <h2>Landing page</h2>
 const Settings = () => <h2>Settings</h2>
 
 

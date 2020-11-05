@@ -15,7 +15,6 @@ const getDataToDisplay = (data, column) => {
 
     let xAxis = data.rows.map(row => row[0]);
     let yAxis = [{name: data.columnHeaders[column].name, data:data.rows.map(row => row[column])}];
-    console.log(xAxis, yAxis);
     return {xAxis, yAxis};
 }
 
@@ -29,8 +28,6 @@ const toProperCase = (word) => {
 
 const SubscribedStatusChart = ({data, name}) => {
     const [status, changeStatus] = useState(1);
-
-    console.log(data);
     if(!data) {
         return <div>Loading audience stat</div>
     }

@@ -19,7 +19,6 @@ class AudienceTab extends Component {
         this.props.fetchAudienceData();
         this.props.fetchSubscribedStatusData();
         this.props.fetchTrafficSources();
-        console.log(this.props.trafficSources);
     }
 
     render() {

@@ -17,7 +17,7 @@ module.exports = (app, oauth2Client) => {
     
     app.get('/auth/google/callback', passport.authenticate('google'),
         (req, res) => {
-            res.redirect('/settings')
+            res.redirect('/dashboard')
         }
     );
     

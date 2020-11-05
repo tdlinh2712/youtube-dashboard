@@ -90,7 +90,7 @@ export function TimeSeriesChart(data, columnName) {
   export function StackedBarChart ({xAxis, yAxis}, title, unitName) {
       return {
         colors: [
-            '#e41111',
+            '#B50717',
             '#120307',
         ],
         chart: {

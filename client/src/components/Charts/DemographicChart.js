@@ -29,8 +29,6 @@ const getDataToDisplay = (audienceData, status) => {
         yAxis[yIndex].data.push(data[2]);
     } )
 
-    console.log(xAxis, yAxis);
-
     return {xAxis, yAxis};
 }
 

@@ -68,5 +68,4 @@ const LogInButton = styled.a`
     &:hover {
         ${redBoxShadow}
     }
-    
 `
