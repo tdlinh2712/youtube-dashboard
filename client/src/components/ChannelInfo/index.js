@@ -16,9 +16,9 @@ const ChannelInfo = ({totalViews, totalMinutesWatched, totalSubscribersGained, o
 
     return  (
         <CardGridStyled>
-            <ChannelInfoCard isSelected={selectedCard==="views"} title="Views" number={totalViews} handleSelected={()=> changeColumnName("views")} />
-            <ChannelInfoCard isSelected={selectedCard==="subscribersGained"} title="Subscribers" number={totalSubscribersGained} handleSelected={()=> changeColumnName("subscribersGained")} />
-            <ChannelInfoCard isSelected={selectedCard==="estimatedMinutesWatched"} title="Minutes Watched" number={totalMinutesWatched} handleSelected={()=> changeColumnName("estimatedMinutesWatched")} />
+            <ChannelInfoCard isSelected={selectedCard==="views"} title="Views gained" number={totalViews} handleSelected={()=> changeColumnName("views")} />
+            <ChannelInfoCard isSelected={selectedCard==="subscribersGained"} title="Subscribers gained" number={totalSubscribersGained} handleSelected={()=> changeColumnName("subscribersGained")} />
+            <ChannelInfoCard isSelected={selectedCard==="estimatedMinutesWatched"} title="Minutes Watched gained" number={totalMinutesWatched} handleSelected={()=> changeColumnName("estimatedMinutesWatched")} />
         </CardGridStyled>
         
     )

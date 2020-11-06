@@ -8,7 +8,7 @@ const ChannelInfoCard = ({title, number, handleSelected, isSelected}) => {
     return (
         <CardClass onClick={handleSelected}>
             <p>{title}</p>
-            <NumberStyled>{number}</NumberStyled>
+            <NumberStyled>+{number}</NumberStyled>
         </CardClass>
     )
 }
