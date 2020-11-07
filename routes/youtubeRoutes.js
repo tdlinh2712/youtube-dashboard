@@ -45,8 +45,8 @@ module.exports = (app, oauth2Client) => {
 
         const traffic = await getTrafficSourceTypes(oauth2Client, req.query.startDate, req.query.endDate);
         res.send(traffic);
-    })
+    });
+
+    
 
 }
-
-
