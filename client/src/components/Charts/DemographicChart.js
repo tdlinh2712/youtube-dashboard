@@ -14,7 +14,6 @@ const getDataToDisplay = (audienceData, status) => {
     let xAxis = [];
     let yAxis = [];
     audienceData = audienceData[status];
-    console.log(status, audienceData);
     audienceData.rows.map( (data) => {
         let index = xAxis.findIndex(x => x === data[0]);
         if(index === -1) {

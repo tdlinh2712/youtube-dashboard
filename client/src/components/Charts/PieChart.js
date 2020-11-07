@@ -26,12 +26,6 @@ const getDataToDisplay = (data, column) => {
       }]
 }
 
-// const toProperCase = (words) => {
-//     let proper = "";
-//     words.split('_').map((word, index) => word.split("").map((char, index) => index === 0 ? proper+=" "+char.toUpperCase() : proper+=char.toLowerCase()) );
-//     return proper;
-// }
-
 
 
 const PieChart = ({data, name}) => {
