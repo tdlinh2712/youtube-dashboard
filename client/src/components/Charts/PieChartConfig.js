@@ -15,13 +15,13 @@ var pieColors = (function () {
     for (i = 1; i < 10; i += 1) {
       // Start out with a darkened base color (negative brighten), and end
       // up with a much brighter color
-      colors.push(LightenDarkenColor(colors[i-1], 20 ));
+      colors.push(LightenDarkenColor(colors[i-1], 25 ));
     }
     return colors;
   }());
   
   // Build the chart
-  export function PieChartConfig ({xAxis, yAxis}, title, unitName) {
+  export function PieChartConfig (data, title) {
     return {
     chart: {
       plotBackgroundColor: null,
@@ -33,40 +33,24 @@ var pieColors = (function () {
       text: ''
     },
     tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      pointFormat: '{series.name}: <b>{point.y}</b>'
     },
     accessibility: {
-      point: {
-        valueSuffix: '%'
-      }
+        point: {
+            valueSuffix: '%'
+        }
     },
     plotOptions: {
-      pie: {
-        allowPointSelect: true,
-        cursor: 'pointer',
-        colors: pieColors,
-        dataLabels: {
-          enabled: true,
-          format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
-          distance: -60,
-          filter: {
-            property: 'percentage',
-            operator: '>',
-            value: 4
-          }
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            colors: pieColors,
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
         }
-      }
     },
-    series: [{
-      name: 'Share',
-      data: [
-        { name: 'Chrome', y: 61.41 },
-        { name: 'Internet Explorer', y: 11.84 },
-        { name: 'Firefox', y: 10.85 },
-        { name: 'Edge', y: 4.67 },
-        { name: 'Safari', y: 4.18 },
-        { name: 'Other', y: 7.05 }
-      ]
-    }]
+    series: data
   }
 };

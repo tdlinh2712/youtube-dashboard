@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import ReactHighcharts from 'react-highcharts'
 import HighchartsTheme from './HighchartsTheme'
 import {ChartWrapper, ChartSelect} from './styled'
+import {toProperCase} from '../../services/ToProperCase'
 import css from './style.css'
 
 ReactHighcharts.Highcharts.setOptions(HighchartsTheme);
@@ -16,12 +17,6 @@ const getDataToDisplay = (data, column) => {
     let xAxis = data.rows.map(row => row[0]);
     let yAxis = [{name: data.columnHeaders[column].name, data:data.rows.map(row => row[column])}];
     return {xAxis, yAxis};
-}
-
-const toProperCase = (word) => {
-    let proper = "";
-    word.split('').map(char => char === char.toUpperCase() ? proper+=" "+char : proper+=char);
-    return proper;
 }
 
 

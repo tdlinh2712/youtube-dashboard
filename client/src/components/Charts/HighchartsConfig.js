@@ -1,4 +1,5 @@
 import {color, color2, color3, color4} from '../../shared/Styles'
+import {toProperCase} from '../../services/ToProperCase'
 
 //get the right column to display
 
@@ -8,7 +9,7 @@ const getDataForDisplay = (historical,rowName, scale) => {
     if(columnIndex===-1 || columnIndex ===0) {
         return [];
     } else {
-        results.push({name:historical.columnHeaders[columnIndex].name});
+        results.push({name: toProperCase(historical.columnHeaders[columnIndex].name)});
         results[0].data = historical.rows.map(row => [(new Date(row[0])).valueOf(),row[columnIndex]]);
         results[0].data = results[0].data.slice(Math.max(results[0].data.length - scale, 0));
     }
@@ -16,9 +17,7 @@ const getDataForDisplay = (historical,rowName, scale) => {
 }
 
 export default function LineChart(historical, rowName, scale){
-    console.log(scale);
     let result = getDataForDisplay(historical, rowName,scale);
-    console.log(result);
     return {
         title: {
             text:`${rowName} gained last month`
